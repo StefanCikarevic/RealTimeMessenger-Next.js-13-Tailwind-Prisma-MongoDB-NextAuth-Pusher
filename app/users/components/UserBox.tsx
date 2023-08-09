@@ -19,7 +19,7 @@ const UserBox: React.FC<UserBoxProps> = ({ data }) => {
     axios
       .post("/api/conversations", { userId: data.id })
       .then((data) => {
-        router.push(`/conversations/${data.data.id}`);
+        router.push(`/conversations`);
       })
       .finally(() => setIsLoading(false));
   }, [data, router]);
