@@ -6,7 +6,7 @@ interface ButtonProps {
   type?: "button" | "submit" | "reset" | undefined;
   fullWidth?: boolean;
   children: React.ReactNode;
-  onclick?: () => void;
+  onClick?: () => void;
   secondary?: boolean;
   danger?: boolean;
   disabled?: boolean;
@@ -14,7 +14,7 @@ interface ButtonProps {
 const Button: React.FC<ButtonProps> = ({
   danger,
   disabled,
-  onclick,
+  onClick,
   secondary,
   fullWidth,
   type,
@@ -22,7 +22,7 @@ const Button: React.FC<ButtonProps> = ({
 }) => {
   return (
     <button
-      onClick={onclick}
+      onClick={onClick}
       type={type}
       disabled={disabled}
       className={clsx(
